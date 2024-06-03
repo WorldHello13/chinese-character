@@ -33,6 +33,32 @@
         .proverb p {
             color: #666;
         }
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-size: 5em; /* 텍스트 크기 조정 */
+            color: red; /* 텍스트 색상 조정 */
+        }
+
+        .left-to-right {
+            animation: left-to-right 11s linear infinite;
+        }
+
+        .right-to-left {
+            animation: right-to-left 11s linear infinite;
+        }
+
+        @keyframes left-to-right {
+            0% { transform: translateX(-200%); }
+            100% { transform: translateX(200%); }
+        }
+
+        @keyframes right-to-left {
+            0% { transform: translateX(200%); }
+            100% { transform: translateX(-200%); }
+        }
     </style>
 </head>
 <body>
@@ -50,8 +76,9 @@
         </div>
         <a href="https://playentry.org/project/665686d019e2b7f5851694f4"target="_blank">엔트리 이해 도움 자료 (클릭해주세요)</a><br>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/8Z4_ngOEKes?si=GBtFhpznBmR__kq5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- 여기에 원하는 만큼 사자성어를 추가할 수 있습니다 -->
-
     </div>
+    <div class="marquee left-to-right">20512 이도현이 책임지기로 했어요!</div>
+
+    <div class="marquee right-to-left">20512 이도현이 책임지기로 했어요!</div>
 </body>
 </html>
